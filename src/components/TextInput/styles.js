@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export default EStyleSheet.create({
   $buttonBackGroundColorBase: '$white',
   $buttonBackGroundColorModifier: 0.1,
-  
+
   container: {
     backgroundColor: '$white',
     width: '90%',
