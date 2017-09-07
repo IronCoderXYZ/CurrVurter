@@ -32,7 +32,7 @@ const styles = EStyleSheet.create({
     backgroundColor: '$primaryBlue'
   },
   checkIcon: {
-    width: 20,
+    width: 18,
   },
 });
 
