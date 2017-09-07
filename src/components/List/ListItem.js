@@ -4,12 +4,18 @@ import styles from './styles';
 import Icon from './Icon';
 
 const ListItem = ({
-    text, onPress, selected=false, checkmark=true, visable=true, customIcon=null }) =>
-  (
+    text,
+    onPress,
+    selected=false,
+    checkmark=true,
+    visable=true,
+    customIcon=null,
+    iconBackground,
+  }) => (
     <TouchableHighlight onPress={ onPress }>
       <View style={ styles.row }>
         <Text style={ styles.text }>{text}</Text>
-        { selected ? <Icon checkmark={checkmark} visible={visable} /> : <Icon /> }
+        { selected ? <Icon checkmark={checkmark} visible={visable} iconBackground={iconBackground} /> : <Icon /> }
         {customIcon}
       </View>
     </TouchableHighlight>
