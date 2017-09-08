@@ -9,7 +9,7 @@ const ICON_SIZE = 23;
 
 class Options extends Component {
   handleThemePress = () => {
-
+    this.props.navigation.navigate('Themes');
   }
 
   handleSitePress = () => {

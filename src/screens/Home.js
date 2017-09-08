@@ -25,7 +25,7 @@ class Home extends Component {
   }
 
   handleOptionsPress = () => {
-    console.log('Options');
+    this.props.navigation.navigate('Options', {title: 'Options'});
   }
 
   handleTextChange = (text) => {
