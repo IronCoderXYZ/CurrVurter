@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, StatusBar, KeyboardAvoidingView } from 'react-native';
+import { connect } from 'react-redux';
 
 import { Container } from '../components/Container';
 import { Logo } from '../components/Logo';
@@ -30,11 +31,11 @@ class Home extends Component {
   }
 
   handleTextChange = (text) => {
-    console.log(changeCurrencyAmount(text));
+    this.props.dispatch(changeCurrencyAmount(text));
   }
 
   handleSwap = () => {
-    this.props.dispatch(swapCurrency);
+    this.props.dispatch(swapCurrency());
   }
 
   render() {
@@ -73,4 +74,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default connect()(Home);
