@@ -7,6 +7,7 @@ import { InputWithButton } from '../components/TextInput';
 import { ClearButton } from '../components/Button';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
+import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
 
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'GBP';
@@ -29,11 +30,11 @@ class Home extends Component {
   }
 
   handleTextChange = (text) => {
-    console.log(text);
+    console.log(changeCurrencyAmount(text));
   }
 
   handleSwap = () => {
-    console.log('swap tapped');
+    this.props.dispatch(swapCurrency);
   }
 
   render() {
