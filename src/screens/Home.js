@@ -12,7 +12,7 @@ import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
 
 class Home extends Component {
   handlePressBaseCurreny = () => {
-    this.props.navigation.navigate('CurrencyList', {title: 'Base Currency', 
+    this.props.navigation.navigate('CurrencyList', {title: 'Base Currency',
     type: 'base'});
   }
 
@@ -40,19 +40,21 @@ class Home extends Component {
     }
 
     return (
-      <Container>
+      <Container backgroundColor={this.props.primaryColor}>
         <StatusBar translucent={false} barStyle='light-content' />
         <Header onPress={this.handleOptionsPress} />
         <KeyboardAvoidingView behavior='padding'>
-          <Logo />
+          <Logo tintColor={this.props.primaryColor} />
           <InputWithButton
             buttonText={this.props.baseCurrency}
             onPress={this.handlePressBaseCurreny}
             defaultValue={this.props.amount.toString()}
             keyboardType='numeric'
             onChangeText={this.handleTextChange}
+            textColor={this.props.primaryColor}
             />
           <InputWithButton
+            textColor={this.props.primaryColor}
             buttonText={this.props.quoteCurrency}
             onPress={this.handlePressQuoteCurreny}
             editable={false}
@@ -87,6 +89,7 @@ const mapStateToProps = (state) => {
     amount: state.currencies.amount,
     conversionRate: rates[quoteCurrency] || 0,
     LastConvertedDate: conversionSelector.date ? new Date(conversionSelector.date) : new Date(),
+    primaryColor: state.theme.primaryColor,
   };
 };
 
