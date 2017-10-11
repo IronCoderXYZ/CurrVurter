@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "currvurter",
-    "description": "An empty new project",
-    "slug": "currvurter",
+    "name": "Currvurter",
+    "description": "A currency converter",
+    "slug": "Currvurter",
     "privacy": "public",
     "sdkVersion": "20.0.0",
     "version": "1.0.0",
     "orientation": "portrait",
     "primaryColor": "#cccccc",
-    "icon": "./assets/icons/app-icon.png",
+    "icon": "./assets/icons/logo.png",
     "loading": {
       "icon": "./assets/icons/loading-icon.png",
       "hideExponentText": false
@@ -17,7 +17,11 @@
       "assetExts": ["ttf", "mp4"]
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hankins.currvurter",
+    },
+    "android": {
+      "package": "com.hankins.currvurter",
     }
   }
 }

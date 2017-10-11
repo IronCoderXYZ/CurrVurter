@@ -66,7 +66,7 @@ class Logo extends Component {
 
     const imageStyle = [
       styles.image,
-      { width: this.imageWidth, tintColor: this.props.tintColor },
+      { width: this.imageWidth },
     ];
 
     return (
@@ -80,7 +80,7 @@ class Logo extends Component {
             style={imageStyle}
             source={require('./images/logo.png')} />
         </Animated.Image>
-        <Text style={styles.text}>Currency Converter</Text>
+        <Text style={styles.text}>CurrVurter</Text>
       </View>
     );
   }

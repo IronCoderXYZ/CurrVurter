@@ -5,7 +5,7 @@ const imageWidth = Dimensions.get('window').width / 2;
 
 export default EStyleSheet.create({
   $largeContainerSize: imageWidth,
-  $largeImageSize: imageWidth / 2,
+  $largeImageSize: imageWidth / 1.5,
   $smallContainerSize: imageWidth / 2,
   $smallImageSize: imageWidth / 4,
 
@@ -21,7 +21,6 @@ export default EStyleSheet.create({
   },
   image: {
     width: imageWidth / 2,
-    tintColor: '$primaryBlue',
   },
   text: {
     fontWeight: '400',
